@@ -1,7 +1,12 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for(let i = 0; i < array.length; i++){
+    const complement = target - array[i]
+      for (let j = i + 1; j < array.length; j++){
+        if (complement === array[j]) return true
+      }
+  }
+  return false
 }
-
 /* 
   Write the Big O time complexity of your function here
 */
@@ -11,7 +16,8 @@ function hasTargetSum(array, target) {
 */
 
 /*
-  Add written explanation of your solution here
+// Need to create a function that pairs up with any two numbers to equal target number. 
+// Return True if the pair adds up.
 */
 
 // You can run `node index.js` to view these console logs
